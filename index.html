@@ -305,14 +305,63 @@
         <div data-modal class="backdrop is-hidden">
             <div class="modal">
                 <button data-modal-close class="close">
+                    <svg class="icon icon-close">
+                        <use href="./images/sprite.svg#icon-close"></use>
+                    </svg>
                 </button>
+                <div class="modal-form">
+                    <p>Оставьте свои данные, мы вам перезвоним</p>
+                    <form name="modal-form">
+                        <div class="form-field">
+                            <label for="user-name">Имя</label>
+                            <div class="icon-wrapper">
+                                <input type="text" name="name" id="user-name" />
+                                <svg class="icon icon-name">
+                                    <use href="./images/sprite.svg#icon-name"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    
+                        <div class="form-field">
+                            <label for="phone-number">Телефон</label>
+                            <div class="icon-wrapper">
+                                <input type="tel" name="phone-number" id="phone-number" />
+                                <svg class="icon icon-tel">
+                                    <use href="./images/sprite.svg#icon-tel"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    
+                        <div class="form-field">
+                            <label for="user-email">Почта</label>
+                            <div class="icon-wrapper">
+                                <input type="email" name="email" id="user-email" />
+                                <svg class="icon icon-mail">
+                                    <use href="./images/sprite.svg#icon-mail"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    
+                        <div class="form-field last-form-field">
+                            <label for="comment">Коментарий</label>
+                            <textarea name="comment" placeholder="Введите текст" id="comment"></textarea>
+                        </div>
+                    
+                        <div class="checkbox-field">
+                            <input class="checkbox-policy visually-hidden" type="checkbox" name="confirmation" id="confirmation" value="confirmed" />
+                            <label class="label-policy" for="confirmation">Соглашаюсь с рассылкой и принимаю &nbsp;<a class="agreement">Условия договора</a></label>
+                        </div>
+                    
+                        <button class="send-button" type="submit">Отправить</button>
+                    </form>
+                </div>
             </div>
         </div>
         <script src="./js/modal.js"></script>
     </main>
     <footer class="site-footer">
         <div class="container">
-            <div class="footer-section">
+            <div class="footer-section address-section">
                 <a href="index.html" class="logo">
                     <img src="images/FooterLogo.svg" alt="Логотип">
                 </a>
@@ -324,7 +373,7 @@
                     </ul>
                 </address>
             </div>
-            <div class="footer-section">
+            <div class="footer-section social-network-section">
                 <p>Присоединяйтесь</p>
                 <ul class="social-network list">
                     <li class="network">
@@ -357,7 +406,20 @@
                     </li>
                 </ul>
             </div>
+            <div class="subscribe-section">
+                <form name="subscribe-form" class="subscribe-form">
+                    <div class="subscribe-field">
+                        <label for="user-email">Подпишитесь на рассылку</label>
+                        <input type="email" name="email" id="user-email" placeholder="E-mail">
+                    </div>
+                    <button class="subscribe-button" type="submit">
+                        Подписаться
+                        <img src="./images/send.svg" alt="send-icon">
+                    </button>
+                </form>
+            </div>
         </div>
     </footer>  
 </body>
 </html>
+
